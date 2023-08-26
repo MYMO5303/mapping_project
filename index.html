@@ -1,24 +1,19 @@
 <!DOCTYPE html>
-<html lang="en">
+<html class="g-resizer-v3-init">
   <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta property="og:title" content="Thai restaurants in NYC" />
     <meta property="og:description" content="webiste shows mapping Thai restaurants" />
     <meta property="og:image" content="https://mymo5303.github.io/project01-suicide/" />
-    <title>Prototype: Thai restaurants</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css"/>
-	<script src="https://cdn.jsdelivr.net/npm/d3@7"></script>
-    
+    <title>Thai restaurants in NYC</title> 
 
     <style>
-        .container {
-            /* Remove the line below if you want a wider page */
-          max-width: 700px !important;
-        }
-
-        h{
-          font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+		/* General */
+        h1{
+			text-align: center;
+			color:#f1f1f1;
+			font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
         }
 
         p{
@@ -26,11 +21,17 @@
           font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
         }
 
+		.text-container{
+			max-width:660px;
+			margin:0 auto;
+			font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+		}
+		
         .credit{
           font-size: medium;
           font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
         }
-        
+    
         .section{
           background-color: rgba(39, 184, 181, 0.1);
         }
@@ -46,11 +47,6 @@
 
         .title{
         	font-size: 36px;
-        }
-
-          .subtitle{
-        	color:black;
-          font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
         }
 
         img {
@@ -71,35 +67,93 @@
         }
 
         .sample {
-        width: "100px";
-        height: "100px";
+			width: "100px";
+			height: "100px";
         }
+
+		/* Video */
+		* {
+			box-sizing: content-box;
+		}
+
+		#videoContainer{
+			position: relative;
+			width: 100%;
+			height: 800px;
+		}
+		
+		#myVideo{
+			position: absolute;
+			right: 0;
+			bottom: 0;
+			width: 100%;
+			object-fit: cover;
+		}
+
+		/* Style the button */
+		#myBtn {
+		width: 200px;
+		font-size: 18px;
+		padding: 10px;
+		border: none;
+		background: #f20940;
+		color: #fff;
+		cursor: pointer;
+		font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+		}
+
+		#myBtn:hover {
+		background: #ddd;
+		color: black;
+		}
+
+		/* Add some content at the bottom of the video or page */
+		.content {
+		position: fixed;
+		bottom: 0;
+		background: rgba(0, 0, 0, 0.5);
+		color: #f1f1f1;
+		width: 100%;
+		padding: 20px;
+		}
 
     </style>
   </head>
 
-  <body>
+  <body style="background-color:black;">
+	<!-- video header -->
+		<div id="videoContainer">
+			<video autoplay muted loop id="myVideo">
+				<source src="thaimark.mov" type="video/mp4">
+				"Your browser does not support HTML5 video. "
+			</video>
+		<div class="content">
+			<h1>Thai restaurants in NYC</h1>
+			<button id="myBtn" onclick="myFunction()">Play</button>
+		</div>
+	</div>
 
   <section class="section">
     <div class="container">
+		
         <h class="title">Thai restaurants in NYC</h>
     
-      <dif class = ""></dif>
+      <!-- <dif class = ""></dif>
       
       <div class="subtitle">Prototype</div>
 
       <figure>
         <img src = "" alt="Picture of little Thailand Way in Queens">
-        <figcaption>Thai restaurants</figcaption></figure>
+        <figcaption>Thai restaurants</figcaption></figure> -->
 
       <div class="content"></div>
         <p>By Mayumi Oshige  |  August 7, 2023  |<a href=" " target="_blank"><u>Github</u></a></p>
-      
+       -->
 
         <p>Intoroduction: Video interview of worker of Thai restaurant goes here.</p>
 
-          <div class="chart"></div>
-          <video controls width="700" height="300" src="IMG_1717.mov"></video>
+          <!-- <div class="chart"></div>
+          <video controls width="700" height="300" src=""></video> -->
 
         <p>Map1: Map of Thailand in Southeast Asia goes here.</p>
 
