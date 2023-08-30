@@ -10,6 +10,25 @@
 
     <style>
 		/* General */
+		#header{
+			margin: auto;
+			width: 100%;
+			position: relative;
+			z-index: 5;
+		}
+
+		#footer{
+			width: 100%;
+			min-height: 5vh;
+			padding-top: 2vh;
+			padding-bottom: 2vh;
+			text-align: center;
+			line-height: 25px;
+			font-size: 13px;
+			position: relative;
+			z-index: 5;
+		}
+
         h1{
 			text-align: center;
 			color:#f1f1f1;
@@ -18,6 +37,7 @@
 
         p{
           font-size: larger;
+		  color:blanchedalmond;
           font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
         }
 
@@ -29,11 +49,13 @@
 		
         .credit{
           font-size: medium;
+		  color:#f1f1f1;
           font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
         }
-    
-        .section{
-          background-color: rgba(39, 184, 181, 0.1);
+
+		#a {
+          color: forestgreen;
+          text-decoration: underline;
         }
 
         .chart{
@@ -45,10 +67,6 @@
           padding: 15px;
         }
 
-        .title{
-        	font-size: 36px;
-        }
-
         img {
           display: block;
           width:700px;
@@ -56,22 +74,7 @@
           transition: 0.3s;
         }
 
-        a {
-          color: forestgreen;
-          text-decoration: underline;
-        }
-
-        .subhead {
-          font-weight: bold;
-          font-size: 20px; 
-        }
-
-        .sample {
-			width: "100px";
-			height: "100px";
-        }
-
-		/* Video */
+		/* video header*/
 		* {
 			box-sizing: content-box;
 		}
@@ -90,342 +93,388 @@
 			object-fit: cover;
 		}
 
+		.content{
+			position: absolute;
+			top: 100px;
+			left: 50%;
+			transform: transltate(-50%, -50%);
+			background: rgba(0, 0, 0, 0.5);
+			color: #fff
+			width: 100%;
+			padding: 20px;
+			font-family: 'Farnklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+		}
+
 		/* Style the button */
 		#myBtn {
-		width: 200px;
-		font-size: 18px;
-		padding: 10px;
-		border: none;
-		background: #f20940;
-		color: #fff;
-		cursor: pointer;
-		font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+			width: 200px;
+			font-size: 18px;
+			padding: 10px;
+			border: none;
+			background: #f20940;
+			color: #fff;
+			cursor: pointer;
+			font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 		}
 
 		#myBtn:hover {
-		background: #ddd;
-		color: black;
-		}
-
-		/* Add some content at the bottom of the video or page */
-		.content {
-		position: fixed;
-		bottom: 0;
-		background: rgba(0, 0, 0, 0.5);
-		color: #f1f1f1;
-		width: 100%;
-		padding: 20px;
+			background: #ddd;
+			color: black;
 		}
 
     </style>
   </head>
 
   <body style="background-color:black;">
+	<section>
 	<!-- video header -->
-		<div id="videoContainer">
-			<video autoplay muted loop id="myVideo">
-				<source src="thaimark.mov" type="video/mp4">
-				"Your browser does not support HTML5 video. "
-			</video>
+	<div id="videoContainer">
+		<video autoplay muted loop id="myVideo">
+			<source src="tm.mov" type="video/mp4">
+			"Your browser does not support HTML5 video. "
+		</video>
 		<div class="content">
-			<h1>Thai restaurants in NYC</h1>
+			<h1>
+				Thai restaurants in NYC
+				<br>prototype
+			</h1>
 			<button id="myBtn" onclick="myFunction()">Play</button>
 		</div>
 	</div>
-
-  <section class="section">
-    <div class="container">
-		
-        <h class="title">Thai restaurants in NYC</h>
-    
-      <!-- <dif class = ""></dif>
-      
-      <div class="subtitle">Prototype</div>
-
-      <figure>
-        <img src = "" alt="Picture of little Thailand Way in Queens">
-        <figcaption>Thai restaurants</figcaption></figure> -->
-
-      <div class="content"></div>
-        <p>By Mayumi Oshige  |  August 7, 2023  |<a href=" " target="_blank"><u>Github</u></a></p>
-       -->
-
-        <p>Intoroduction: Video interview of worker of Thai restaurant goes here.</p>
-
-          <!-- <div class="chart"></div>
-          <video controls width="700" height="300" src=""></video> -->
-
-        <p>Map1: Map of Thailand in Southeast Asia goes here.</p>
-
-          <div class="chart"><iframe title="Thailand is here!" aria-label="Map" id="datawrapper-chart-l0qC8" src="https://datawrapper.dwcdn.net/l0qC8/2/" scrolling="no" frameborder="0" style="width: 0; min-width: 100% !important; border: none;" height="599" data-external="1"></iframe><script type="text/javascript">!function(){"use strict";window.addEventListener("message",(function(a){if(void 0!==a.data["datawrapper-height"]){var e=document.querySelectorAll("iframe");for(var t in a.data["datawrapper-height"])for(var r=0;r<e.length;r++)if(e[r].contentWindow===a.source){var i=a.data["datawrapper-height"][t]+"px";e[r].style.height=i}}}))}();
-          </script></div>
-
-        <p>Story: Thai food varies by region w/pictures.</p>
-          <figure><img src="IMG_0112.JPG" alt=" ">
-            <figcaption>Thai restaurants</figcaption>
-          </figure>
-
-        <p>Map2: Interactive map(ai2html) goes here.</p>
-         <div class="ai2html-container">
-
-<!-- Generated by ai2html v0.113.0 - 2023-08-09 15:07 -->
-<!-- ai file: Thai Restaurants.ai -->
-		<style media="screen,print">
-			#g-Thai-Restaurants-box ,
-			#g-Thai-Restaurants-box .g-artboard {
-				margin:0 auto;
-			}
-			#g-Thai-Restaurants-box p {
-				margin:0;
-			}
-			#g-Thai-Restaurants-box .g-aiAbs {
-				position:absolute;
-			}
-			#g-Thai-Restaurants-box .g-aiImg {
-				position:absolute;
-				top:0;
-				display:block;
-				width:100% !important;
-			}
-			#g-Thai-Restaurants-box .g-aiSymbol {
-				position: absolute;
-				box-sizing: border-box;
-			}
-			#g-Thai-Restaurants-box .g-aiPointText p { white-space: nowrap; }
-			#g-Thai-Restaurants-Artboard_1 {
-				position:relative;
-				overflow:hidden;
-			}
-			#g-Thai-Restaurants-Artboard_1 p {
-				font-family:arial,helvetica,sans-serif;
-				font-weight:bold;
-				line-height:17px;
-				height:auto;
-				opacity:1;
-				letter-spacing:0em;
-				font-size:14px;
-				text-align:left;
-				color:rgb(0,0,0);
-				text-transform:none;
-				padding-bottom:0;
-				padding-top:0;
-				mix-blend-mode:normal;
-				font-style:normal;
-				position:static;
-			}
-			#g-Thai-Restaurants-Artboard_1 .g-pstyle0 {
-				height:17px;
-				color:rgb(0,255,0);
-			}
-			#g-Thai-Restaurants-Artboard_1 .g-pstyle1 {
-				height:17px;
-			}
-			#g-Thai-Restaurants-Artboard_1 .g-pstyle2 {
-				height:17px;
-				color:rgb(51,51,51);
-			}
-			#g-Thai-Restaurants-Artboard_1 .g-pstyle3 {
-				line-height:13px;
-				height:13px;
-				font-size:11px;
-			}
-			#g-Thai-Restaurants-Artboard_1 .g-pstyle4 {
-				line-height:13px;
-				height:13px;
-				font-size:11px;
-				color:rgb(136,136,136);
-			}
-			
-
-		</style>
-
-		<div id="g-Thai-Restaurants-box" class="ai2html">
-
-		<!-- Artboard: Artboard_1 -->
-		<div id="g-Thai-Restaurants-Artboard_1" class="g-artboard" style="max-width: 600px;max-height: 616px" data-aspect-ratio="0.974" data-min-width="0">
-		<div style="padding: 0 0 102.6667% 0;"></div>
-				<img id="g-Thai-Restaurants-Artboard_1-img" class="g-Thai-Restaurants-Artboard_1-img g-aiImg" alt="" src="Thai-Restaurants-Artboard_1.png"/>
-		<!-- Generator: Adobe Illustrator 27.6.1, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
-		<svg class="g-Thai-Restaurants-Artboard_1-interactions-img g-aiImg" version="1.2" baseProfile="tiny" id="g-Thai-Restaurants-Artboard_1-interactions-img" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
-			x="0px" y="0px" viewBox="0 0 600 616" overflow="visible" xml:space="preserve">
-			<g>			
-				<path id="Bangkok" data-name="Bangkok" fill="#E0DEDE" stroke="#000000" stroke-width="0.5" stroke-miterlimit="10"
-				d="M119.703,191.649l-7.322-0.29l-2.351,5.179l-1.648,0.126l-1.72-5.964l0.098-1.709l3.803,0.015l1.571-3.732l3.164,0.742l5.636-0.79
-				l0.467,3.398L119.703,191.649z"/>
-			
-				<path id="Tak" data-name="Tak" fill="#E0DEDE" stroke="#000000" stroke-width="0.5" stroke-miterlimit="10" d="
-				M73.797,94.027l0.1,5.046l7.502,3.673l-0.957,8.246l1.671,1.039l-2.566,8.541l-5.977,1.627l-0.149,5.256l2.038,9.96l1.062,2.469
-				l-1.989,5.618l0.37,3.783l-1.894,4.281l-2.169-1.36l-5.718-8.544l-2.98-1.417l0.991-7.52l2.384-3.719l3.18,0.39l2.374-6.755
-				l-1.473-1.412l-4.011,4.106l-1.263-4.725l-4.358-6.478l1.317-4.222l-2.282-3.398l-7.902-6.814l-2.933-5.053l-1.863-1.232
-				l9.827-3.513l0.824,9.765l2.3,1.342l3.475-1.065l-0.816-4.204l1.853-4.907l2.52-2.433l0.275,6.75L73.797,94.027z"/>
-			
-				<path id="Chiang_Rai" data-name="Chiang_Rai" fill="#E0DEDE" stroke="#000000" stroke-width="0.5" stroke-miterlimit="10" d="
-				M108.113,41.369l-5.135,2.787l-1.129,3.401l-5.11,2.243l-0.598-2.41l-5.526,1.317l-2.859,0.169l-0.277,7.435l-4.024,3.141
-				l-2.223-4.478l0.788-2.251l-2.017-9.288l2.117-1.671l4.045-11.069l-0.144-4.794l7.078,0.277l3.857-2.738l3.916,3.144l6.103-1.796
-				l2.905,4.963l2.184,0.814l-1.612,6.909L108.113,41.369z"/>
-			
-				<path id="Chonburi" data-name="Chonburi" fill="#E0DEDE" stroke="#000000" stroke-width="0.5" stroke-miterlimit="10" d="
-				M141.176,204.609l-0.621,0.939l-7.301,2.895l-1.699-1.229l-6.108,1.111l0.239,2.779l-2.315,2.928l-0.613,3.832l-3.501-1.702
-				l2.053-2.566l-1.378-2.708l1.707-2.661l-0.513-6.662l1.699-4.212l3.993-3.164l9.46,4.704L141.176,204.609z"/>
-			
-				<path id="Nakhon_Nayok" data-name="Nakhon_Nayok" fill="#E0DEDE" stroke="#000000" stroke-width="0.5" stroke-miterlimit="10" d="
-				M133.497,173.394l0.747,4.222l-7.432,7.145l-5.867,0.326l0.18-6.442l3.1-2.808l3.685-0.698l1.445-3.116L133.497,173.394z"/>
-			
-				<path id="Nakhon_Ratchasima" data-name="Nakhon_Ratchasima" fill="#E0DEDE" stroke="#000000" stroke-width="0.5" stroke-miterlimit="10" d="
-				M156.469,138.988l2.302,2.749l6.68-0.598l2.412,1.992l3.306,3.19l1.358,8.079l-3.057,0.829l-3.647,5.007l-3.691,0.431l-1.36,3.175
-				l-0.449,6.239l3.254,6.775l-0.572,3.416l-10.961,0.321l-2.52-1.242l-4.645-4.455l-2.818,1.204l-3.318-2.882l-5.246,0.177
-				l-4.142-1.37l-1.242-6.881l2.122,0.647l4.378-3.639l-1.699-4.453l-2.62-0.819l0.493-5.341l3.136,2.158l3.462-0.952l9.924-5.492
-				l1.902-4.599L156.469,138.988z"/>
-			
-				<path id="Ayutthaya" data-name="Ayutthaya" fill="#E0DEDE" stroke="#000000" stroke-width="0.5" stroke-miterlimit="10" d="
-				M113.194,167.635l2.805,2.146l2.892,8.171l-5.466,2.949l-6.301,0.241l-1.671-0.062l-1.55-1.519l1.507-5.135l-0.683-2.569
-				l3.991-0.565l2.523-4.404L113.194,167.635z"/>
-			
-				<path id="Nakhon_Pathom" data-name="Nakhon_Pathom" fill="#E0DEDE" stroke="#000000" stroke-width="0.5" stroke-miterlimit="10" d="
-				M105.454,181.08l-0.488,2.163l1.794,5.746l-0.098,1.709l-1.804,1.712l-4.499-0.557l-2.944-1.009l-0.318-4.779l-1.684-0.711
-				l-1.709-2.921l4.353-2.087l5.846-0.788L105.454,181.08z"/>
-
-				<path id="Charm_icon" data-name="Charm_icon" d="M484.282,86.453
-					c0.004,1.353-0.28,2.691-0.832,3.926c-1.456,3.25-8.45,12.636-8.45,12.636s-6.968-9.386-8.45-12.636
-					c-0.552-1.235-0.836-2.573-0.832-3.926c-0.043-5.169,4.112-9.395,9.281-9.438c0,0,0,0,0.001,0
-					C480.169,77.058,484.325,81.283,484.282,86.453C484.282,86.453,484.282,86.453,484.282,86.453z"/>
-				<path id="Thai_icon" data-name="Thai_icon" d="M355.282,319.453
-					c0.004,1.353-0.28,2.691-0.832,3.926c-1.456,3.25-8.45,12.636-8.45,12.636s-6.968-9.386-8.45-12.636
-					c-0.552-1.235-0.836-2.573-0.832-3.926c-0.043-5.169,4.112-9.395,9.281-9.438c0,0,0,0,0.001,0
-					C351.169,310.058,355.325,314.283,355.282,319.453C355.282,319.453,355.282,319.453,355.282,319.453z"/>
-				<path id="Opai_icon" data-name="Opai_icon" d="M275.282,464.453
-					c0.004,1.353-0.28,2.691-0.832,3.926c-1.456,3.25-8.45,12.636-8.45,12.636s-6.968-9.386-8.45-12.636
-					c-0.552-1.235-0.836-2.573-0.832-3.926c-0.043-5.169,4.112-9.395,9.281-9.438c0,0,0,0,0.001,0
-					C271.169,455.058,275.325,459.283,275.282,464.453C275.282,464.453,275.282,464.453,275.282,464.453z"/>
-				<path id="Raenu_icon" data-name="Raenu_icon" d="M313.282,391.453
-					c0.004,1.353-0.28,2.691-0.832,3.926c-1.456,3.25-8.45,12.636-8.45,12.636s-6.968-9.386-8.45-12.636
-					c-0.552-1.235-0.836-2.573-0.832-3.926c-0.043-5.169,4.112-9.395,9.281-9.438c0,0,0,0,0.001,0
-					C309.169,382.058,313.325,386.283,313.282,391.453C313.282,391.453,313.282,391.453,313.282,391.453z"/>
-				<path id="Liv_icon" data-name="Liv_icon" d="M349.282,343.453
-					c0.004,1.353-0.28,2.691-0.832,3.926c-1.456,3.25-8.45,12.636-8.45,12.636s-6.968-9.386-8.45-12.636
-					c-0.552-1.235-0.836-2.573-0.832-3.926c-0.043-5.169,4.112-9.395,9.281-9.438c0,0,0,0,0.001,0
-					C345.169,334.058,349.325,338.283,349.282,343.453C349.282,343.453,349.282,343.453,349.282,343.453z"/>
-				<path id="Spice_icon" data-name="Spice_icon" d="M365.282,316.453
-					c0.004,1.353-0.28,2.691-0.832,3.926c-1.456,3.25-8.45,12.636-8.45,12.636s-6.968-9.386-8.45-12.636
-					c-0.552-1.235-0.836-2.573-0.832-3.926c-0.043-5.169,4.112-9.395,9.281-9.438c0,0,0,0,0.001,0
-					C361.169,307.058,365.325,311.283,365.282,316.453C365.282,316.453,365.282,316.453,365.282,316.453z"/>
-				<path id="Mek_icon" data-name="Mek_icon" d="M383.282,375.453
-					c0.004,1.353-0.28,2.691-0.832,3.926c-1.456,3.25-8.45,12.636-8.45,12.636s-6.968-9.386-8.45-12.636
-					c-0.552-1.235-0.836-2.573-0.832-3.926c-0.043-5.169,4.112-9.395,9.281-9.438c0,0,0,0,0.001,0
-					C379.169,366.058,383.325,370.283,383.282,375.453C383.282,375.453,383.282,375.453,383.282,375.453z"/>
-				<path id="Pa_icon" data-name="Pa_icon" d="M480.282,280.453
-					c0.004,1.353-0.28,2.691-0.832,3.926c-1.456,3.25-8.45,12.636-8.45,12.636s-6.968-9.386-8.45-12.636
-					c-0.552-1.235-0.836-2.573-0.832-3.926c-0.043-5.169,4.112-9.395,9.281-9.438c0,0,0,0,0.001,0
-					C476.169,271.058,480.325,275.283,480.282,280.453C480.282,280.453,480.282,280.453,480.282,280.453z"/>
-			</g>
-
-				<style>#g-Thai-Restaurants-Artboard_1-interactions-img rect, #g-Thai-Restaurants-Artboard_1-interactions-img circle, #g-Thai-Restaurants-Artboard_1-interactions-img path, #g-Thai-Restaurants-Artboard_1-interactions-img line, #g-Thai-Restaurants-Artboard_1-interactions-img polyline, #g-Thai-Restaurants-Artboard_1-interactions-img polygon { vector-effect: non-scaling-stroke; }</style>
-		</svg>
-
-				<div id="g-ai0-1" class="g-exportSvg g-aiAbs g-aiPointText" style="top:18.5293%;margin-top:-10.1px;left:75.6393%;width:66px;">
-					<p class="g-pstyle0">Charm</p>
-				</div>
-				<div id="g-ai0-2" class="g-exportSvg g-aiAbs g-aiPointText" style="top:18.5293%;margin-top:-10.1px;left:75.6393%;width:66px;">
-					<p class="g-pstyle1">Charm</p>
-				</div>
-				<div id="g-ai0-3" class="g-exportSvg g-aiAbs g-aiPointText" style="top:18.5293%;margin-top:-10.1px;left:75.6393%;width:66px;">
-					<p class="g-pstyle1">Charm</p>
-				</div>
-				<div id="g-ai0-4" class="g-exportSvg g-aiAbs g-aiPointText" style="top:39.8993%;margin-top:-9.8px;left:53.6265%;width:146px;">
-					<p class="g-pstyle0">Columbia University</p>
-				</div>
-				<div id="g-ai0-5" class="g-exportSvg g-aiAbs g-aiPointText" style="top:39.8993%;margin-top:-9.8px;left:53.6265%;width:146px;">
-					<p class="g-pstyle2">Columbia University</p>
-				</div>
-				<div id="g-ai0-6" class="g-exportSvg g-aiAbs g-aiPointText" style="top:39.8993%;margin-top:-9.8px;left:53.6265%;width:146px;">
-					<p class="g-pstyle1">Columbia University</p>
-				</div>
-				<div id="g-ai0-7" class="g-exportSvg g-aiAbs g-aiPointText" style="top:42.7176%;margin-top:-10.1px;left:63.9495%;width:199px;">
-					<p class="g-pstyle0">Pa Pa Thai Cuisine Harlem</p>
-				</div>
-				<div id="g-ai0-8" class="g-exportSvg g-aiAbs g-aiPointText" style="top:42.7176%;margin-top:-10.1px;left:63.9495%;width:199px;">
-					<p class="g-pstyle1">Pa Pa Thai Cuisine Harlem</p>
-				</div>
-				<div id="g-ai0-9" class="g-exportSvg g-aiAbs g-aiPointText" style="top:42.7176%;margin-top:-10.1px;left:63.9495%;width:199px;">
-					<p class="g-pstyle1">Pa Pa Thai Cuisine Harlem</p>
-				</div>
-				<div id="g-ai0-10" class="g-exportSvg g-aiAbs g-aiPointText" style="top:48.7241%;margin-top:-10.1px;left:56.5553%;width:59px;">
-					<p class="g-pstyle0">Spice</p>
-				</div>
-				<div id="g-ai0-11" class="g-exportSvg g-aiAbs g-aiPointText" style="top:48.7241%;margin-top:-10.1px;left:56.5553%;width:59px;">
-					<p class="g-pstyle1">Spice</p>
-				</div>
-				<div id="g-ai0-12" class="g-exportSvg g-aiAbs g-aiPointText" style="top:48.7241%;margin-top:-10.1px;left:56.5553%;width:59px;">
-					<p class="g-pstyle1">Spice</p>
-				</div>
-				<div id="g-ai0-13" class="g-exportSvg g-aiAbs g-aiPointText" style="top:52.6202%;margin-top:-10.1px;left:44.6833%;width:100px;">
-					<p class="g-pstyle0">Thai Market</p>
-				</div>
-				<div id="g-ai0-14" class="g-exportSvg g-aiAbs g-aiPointText" style="top:52.6202%;margin-top:-10.1px;left:44.6833%;width:100px;">
-					<p class="g-pstyle1">Thai Market</p>
-				</div>
-				<div id="g-ai0-15" class="g-exportSvg g-aiAbs g-aiPointText" style="top:52.6202%;margin-top:-10.1px;left:44.6833%;width:100px;">
-					<p class="g-pstyle1">Thai Market</p>
-				</div>
-				<div id="g-ai0-16" class="g-exportSvg g-aiAbs g-aiPointText" style="top:53.5943%;margin-top:-10.1px;left:36.1379%;width:150px;">
-					<p class="g-pstyle0">Living Thai Cuisine</p>
-				</div>
-				<div id="g-ai0-17" class="g-exportSvg g-aiAbs g-aiPointText" style="top:53.5943%;margin-top:-10.1px;left:36.1379%;width:150px;">
-					<p class="g-pstyle1">Living Thai Cuisine</p>
-				</div>
-				<div id="g-ai0-18" class="g-exportSvg g-aiAbs g-aiPointText" style="top:53.5943%;margin-top:-10.1px;left:36.1379%;width:150px;">
-					<p class="g-pstyle1">Living Thai Cuisine</p>
-				</div>
-				<div id="g-ai0-19" class="g-exportSvg g-aiAbs g-aiPointText" style="top:63.9839%;margin-top:-10.1px;left:55.9258%;width:75px;">
-					<p class="g-pstyle0">Mekong</p>
-				</div>
-				<div id="g-ai0-20" class="g-exportSvg g-aiAbs g-aiPointText" style="top:63.9839%;margin-top:-10.1px;left:55.9258%;width:75px;">
-					<p class="g-pstyle1">Mekong</p>
-				</div>
-				<div id="g-ai0-21" class="g-exportSvg g-aiAbs g-aiPointText" style="top:63.9839%;margin-top:-10.1px;left:55.9258%;width:75px;">
-					<p class="g-pstyle1">Mekong</p>
-				</div>
-				<div id="g-ai0-22" class="g-exportSvg g-aiAbs g-aiPointText" style="top:68.6917%;margin-top:-10.1px;left:47.2678%;width:65px;">
-					<p class="g-pstyle0">Raenu</p>
-				</div>
-				<div id="g-ai0-23" class="g-exportSvg g-aiAbs g-aiPointText" style="top:68.6917%;margin-top:-10.1px;left:47.2678%;width:65px;">
-					<p class="g-pstyle1">Raenu</p>
-				</div>
-				<div id="g-ai0-24" class="g-exportSvg g-aiAbs g-aiPointText" style="top:68.6917%;margin-top:-10.1px;left:47.2678%;width:65px;">
-					<p class="g-pstyle1">Raenu</p>
-				</div>
-				<div id="g-ai0-25" class="g-exportSvg g-aiAbs g-aiPointText" style="top:79.893%;margin-top:-10.1px;left:38.0178%;width:86px;">
-					<p class="g-pstyle0">Opai Thai</p>
-				</div>
-				<div id="g-ai0-26" class="g-exportSvg g-aiAbs g-aiPointText" style="top:79.893%;margin-top:-10.1px;left:38.0178%;width:86px;">
-					<p class="g-pstyle1">Opai Thai</p>
-				</div>
-				<div id="g-ai0-27" class="g-exportSvg g-aiAbs g-aiPointText" style="top:79.893%;margin-top:-10.1px;left:38.0178%;width:86px;">
-					<p class="g-pstyle1">Opai Thai</p>
-				</div>
-				<div id="g-ai0-28" class="g-exportSvg g-aiAbs g-aiPointText" style="top:93.9133%;margin-top:-7.5px;left:74.5%;width:30px;">
-					<p class="g-pstyle3">&copy;</p>
-				</div>
-				<div id="g-ai0-29" class="g-exportSvg g-aiAbs g-aiPointText" style="top:93.9133%;margin-top:-7.5px;left:76.3066%;width:100px;">
-					<p class="g-pstyle3">OpenStreetMap</p>
-				</div>
-				<div id="g-ai0-30" class="g-exportSvg g-aiAbs g-aiPointText" style="top:93.9133%;margin-top:-7.5px;left:89.7048%;width:79px;">
-					<p class="g-pstyle3">contributors</p>
-				</div>
-				<div id="g-ai0-31" class="g-exportSvg g-aiAbs g-aiPointText" style="top:99.2704%;margin-top:-7.5px;left:0%;width:84px;">
-					<p class="g-pstyle4">Created with</p>
-				</div>
-				<div id="g-ai0-32" class="g-exportSvg g-aiAbs g-aiPointText" style="top:99.2704%;margin-top:-7.5px;left:10.7476%;width:85px;">
-					<p class="g-pstyle4">Datawrapper</p>
-				</div>
-			</div>
-
+	<!-- contents -->
+	<div class="text-container">
+    	<div class="credit">
+			By Mayumi Oshige  |  August 7, 2023  |
+			<a href=" " target="_blank"><u>Github</u></a>
 		</div>
 
-		<!-- End ai2html - 2023-08-09 15:07 -->
+		<p> Do you like Thai food? Yes, you do. But Do you know where
+			Thailand is?  I show you it is here.
+		</p>
 
-          
-          <div class="chart"></div>
+		<p>Map1: Map of Thailand in south East asia goes here.
+
+			<div class="chart">
+				<iframe title="Thailand is here!" aria-label="Map" id="datawrapper-chart-l0qC8" src="https://datawrapper.dwcdn.net/l0qC8/2/" scrolling="no" frameborder="0" style="width: 0; min-width: 100% !important; border: none;" height="599" data-external="1"></iframe><script type="text/javascript">!function(){"use strict";window.addEventListener("message",(function(a){if(void 0!==a.data["datawrapper-height"]){var e=document.querySelectorAll("iframe");for(var t in a.data["datawrapper-height"])for(var r=0;r<e.length;r++)if(e[r].contentWindow===a.source){var i=a.data["datawrapper-height"][t]+"px";e[r].style.height=i}}}))}();
+				</script>
+			</div>
+		</p>
+
+		<p>Story: Thai food varies by region w/pictures.
+			<figure><img src="IMG_0112.JPG" alt=" ">
+				<figcaption>
+					Thai restaurants
+				</figcaption>
+			</figure>
+		</p>
+
+		<p>Map2: Interactive map(ai2html) goes here.</p>
+	</div>
+    
+	<div class="ai2html-container">
+<!-- Generated by ai2html v0.113.0 - 2023-08-26 01:40 -->
+<!-- ai file: #thai_restaurants.ai -->
+	<style media="screen,print">
+		#g-_thai_restaurants-box
+		#g-_thai_restaurants-box .g-artboard {
+			margin:0 auto;
+		}
+		#g-_thai_restaurants-box p {
+			margin:0;
+		}
+		#g-_thai_restaurants-box .g-aiAbs {
+			position:absolute;
+		}
+		#g-_thai_restaurants-box .g-aiImg {
+			position:absolute;
+			top:0;
+			display:block;
+			width:100% !important;
+		}
+		#g-_thai_restaurants-box .g-aiSymbol {
+			position: absolute;
+			box-sizing: border-box;
+		}
+		#g-_thai_restaurants-box .g-aiPointText p { white-space: nowrap; }
+		#g-_thai_restaurants-Artboard_1 {
+			position:relative;
+			overflow:hidden;
+		}
+		#g-_thai_restaurants-Artboard_1 p {
+			font-family:arial,helvetica,sans-serif;
+			font-weight:bold;
+			line-height:17px;
+			height:auto;
+			opacity:1;
+			letter-spacing:0em;
+			font-size:14px;
+			text-align:left;
+			color:rgb(0,0,0);
+			text-transform:none;
+			padding-bottom:0;
+			padding-top:0;
+			mix-blend-mode:normal;
+			font-style:normal;
+			position:static;
+		}
+		#g-_thai_restaurants-Artboard_1 .g-pstyle0 {
+			height:17px;
+			color:rgb(0,255,0);
+		}
+		#g-_thai_restaurants-Artboard_1 .g-pstyle1 {
+			height:17px;
+		}
+		#g-_thai_restaurants-Artboard_1 .g-pstyle2 {
+			height:17px;
+			color:rgb(51,51,51);
+		}
+		#g-_thai_restaurants-Artboard_1 .g-pstyle3 {
+			line-height:14px;
+			height:14px;
+			letter-spacing:0.083em;
+			font-size:12px;
+			color:rgb(0,255,0);
+		}
+		#g-_thai_restaurants-Artboard_1 .g-pstyle4 {
+			line-height:14px;
+			height:14px;
+			letter-spacing:0.083em;
+			font-size:12px;
+		}
+		#g-_thai_restaurants-Artboard_1 .g-pstyle5 {
+			line-height:14px;
+			height:14px;
+			letter-spacing:0.083em;
+			font-size:12px;
+			color:rgb(186,186,186);
+		}
+		#g-_thai_restaurants-Artboard_1 .g-pstyle6 {
+			line-height:14px;
+			height:14px;
+			font-size:12px;
+		}
+		#g-_thai_restaurants-Artboard_1 .g-pstyle7 {
+			line-height:12px;
+			height:12px;
+			font-size:10px;
+			color:rgb(51,51,51);
+		}
+		#g-_thai_restaurants-Artboard_1 .g-pstyle8 {
+			line-height:13px;
+			height:13px;
+			font-size:11px;
+		}
+
+	</style>
+
+	<div id="g-_thai_restaurants-box" class="ai2html">
+
+	<!-- Artboard: Artboard_1 -->
+		<div id="g-_thai_restaurants-Artboard_1" class="g-artboard" style="max-width: 600px;max-height: 616px" data-aspect-ratio="0.974" data-min-width="0">
+	<div style="padding: 0 0 102.6667% 0;"></div>
+			<img id="g-_thai_restaurants-Artboard_1-img" class="g-_thai_restaurants-Artboard_1-img g-aiImg" alt="" src="_thai_restaurants-Artboard_1.png"/>
+	<!-- Generator: Adobe Illustrator 27.6.1, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+	<svg class="g-_thai_restaurants-Artboard_1-interactions-img g-aiImg" version="1.2" baseProfile="tiny" id="g-_thai_restaurants-Artboard_1-interactions-img" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+		x="0px" y="0px" viewBox="0 0 600 616" overflow="visible" xml:space="preserve">
+	<g>
+		<path id="charm-icon" data-name="charm-icon" d="M558.282,79.453
+			c0.004,1.353-0.279,2.691-0.832,3.926c-1.456,3.25-8.45,12.636-8.45,12.636s-6.968-9.386-8.45-12.636
+			c-0.552-1.235-0.836-2.573-0.832-3.926c-0.043-5.169,4.112-9.395,9.281-9.438c0,0,0,0,0.001,0
+			C554.169,70.058,558.325,74.283,558.282,79.453C558.282,79.453,558.282,79.453,558.282,79.453z"/>
+		<path id="spice-icon" data-name="spice-icon" d="M429.282,329.453
+			c0.004,1.353-0.28,2.691-0.832,3.926c-1.456,3.25-8.45,12.636-8.45,12.636s-6.968-9.386-8.45-12.636
+			c-0.552-1.235-0.836-2.573-0.832-3.926c-0.043-5.169,4.112-9.395,9.281-9.438c0,0,0,0,0.001,0
+			C425.169,320.058,429.325,324.283,429.282,329.453C429.282,329.453,429.282,329.453,429.282,329.453z"/>
+		<path id="pa-icon" data-name="pa-icon" d="M554.282,290.453c0.004,1.353-0.279,2.691-0.832,3.926
+			c-1.456,3.25-8.45,12.636-8.45,12.636s-6.968-9.386-8.45-12.636c-0.552-1.235-0.836-2.573-0.832-3.926
+			c-0.043-5.169,4.112-9.395,9.281-9.438c0,0,0,0,0.001,0C550.169,281.058,554.325,285.283,554.282,290.453
+			C554.282,290.453,554.282,290.453,554.282,290.453z"/>
+		<path id="mekong-icon" data-name="mekong-icon" d="M448.282,393.453
+			c0.004,1.353-0.28,2.691-0.832,3.926c-1.456,3.25-8.45,12.636-8.45,12.636s-6.968-9.386-8.45-12.636
+			c-0.552-1.235-0.836-2.573-0.832-3.926c-0.043-5.169,4.112-9.395,9.281-9.438c0,0,0,0,0.001,0
+			C444.169,384.058,448.325,388.283,448.282,393.453C448.282,393.453,448.282,393.453,448.282,393.453z"/>
+		<path id="raenu-icon" data-name="raenu-icon" d="M372.282,411.453
+			c0.004,1.353-0.28,2.691-0.832,3.926c-1.456,3.25-8.45,12.636-8.45,12.636s-6.968-9.386-8.45-12.636
+			c-0.552-1.235-0.836-2.573-0.832-3.926c-0.043-5.169,4.112-9.395,9.281-9.438c0,0,0,0,0.001,0
+			C368.169,402.058,372.325,406.283,372.282,411.453C372.282,411.453,372.282,411.453,372.282,411.453z"/>
+		<path id="opai-icon" data-name="opai-icon" d="M331.282,490.453c0.004,1.353-0.28,2.691-0.832,3.926
+			c-1.456,3.25-8.45,12.636-8.45,12.636s-6.968-9.386-8.45-12.636c-0.552-1.235-0.836-2.573-0.832-3.926
+			c-0.043-5.169,4.112-9.395,9.281-9.438c0,0,0,0,0.001,0C327.169,481.058,331.325,485.283,331.282,490.453
+			C331.282,490.453,331.282,490.453,331.282,490.453z"/>
+		<path id="living-icon" data-name="living-icon" d="M411.282,358.453
+			c0.004,1.353-0.28,2.691-0.832,3.926c-1.456,3.25-8.45,12.636-8.45,12.636s-6.968-9.386-8.45-12.636
+			c-0.552-1.235-0.836-2.573-0.832-3.926c-0.043-5.169,4.112-9.395,9.281-9.438c0,0,0,0,0.001,0
+			C407.169,349.058,411.325,353.283,411.282,358.453C411.282,358.453,411.282,358.453,411.282,358.453z"/>
+		<path id="tm-icon" data-name="tm-icon" d="M418.282,333.453c0.004,1.353-0.28,2.691-0.832,3.926
+			c-1.456,3.25-8.45,12.636-8.45,12.636s-6.968-9.386-8.45-12.636c-0.552-1.235-0.836-2.573-0.832-3.926
+			c-0.043-5.169,4.112-9.395,9.281-9.438c0,0,0,0,0.001,0C414.169,324.058,418.325,328.283,418.282,333.453
+			C418.282,333.453,418.282,333.453,418.282,333.453z"/>
+		
+			<path id="Bangkok" data-name="Bangkok" fill="#DDDDDD" stroke="#000000" stroke-width="0.5" stroke-miterlimit="10" d="
+			M143.986,238.888l-8.983-0.356l-2.884,6.354l-2.021,0.154l-2.11-7.317l0.12-2.097l4.666,0.019l1.927-4.578l3.882,0.91l6.914-0.97
+			l0.573,4.169L143.986,238.888z"/>
+		
+			<path id="Chonburi" data-name="Chonburi" fill="#DDDDDD" stroke="#000000" stroke-width="0.5" stroke-miterlimit="10" d="
+			M170.33,254.789l-0.762,1.152l-8.958,3.552l-2.084-1.508l-7.494,1.363l0.293,3.41l-2.84,3.593l-0.753,4.701l-4.295-2.088
+			l2.519-3.149l-1.691-3.322l2.094-3.265l-0.63-8.174l2.084-5.167l4.899-3.882l11.606,5.771L170.33,254.789z"/>
+		
+			<path id="Nakhon_Nayok" data-name="Nakhon_Nayok" fill="#DDDDDD" stroke="#000000" stroke-width="0.5" stroke-miterlimit="10" d="
+			M160.91,216.492l0.916,5.18l-9.118,8.766l-7.198,0.4l0.22-7.903l3.804-3.445l4.521-0.856l1.773-3.822L160.91,216.492z"/>
+		
+			<path id="Nakhon_Ratchashima" data-name="Nakhon_Ratchashima" fill="#DDDDDD" stroke="#000000" stroke-width="0.5" stroke-miterlimit="10" d="
+			M189.093,174.281l2.824,3.372l8.196-0.734l2.96,2.443l4.055,3.914l1.666,9.912l-3.75,1.017l-4.474,6.143l-4.528,0.529l-1.669,3.895
+			l-0.551,7.654l3.992,8.312l-0.702,4.191l-13.448,0.394l-3.092-1.524l-5.699-5.466l-3.457,1.477l-4.071-3.536l-6.436,0.217
+			l-5.082-1.681l-1.524-8.441l2.604,0.793l5.372-4.465l-2.084-5.463l-3.215-1.004l0.605-6.552l3.848,2.648l4.248-1.168l12.176-6.738
+			l2.333-5.642L189.093,174.281z"/>
+		
+			<path id="Ayutthaya" data-name="Ayutthaya" fill="#DDDDDD" stroke="#000000" stroke-width="0.5" stroke-miterlimit="10" d="
+			M136.001,209.426l3.441,2.632l3.549,10.025l-6.707,3.618l-7.73,0.296l-2.05-0.076l-1.902-1.864l1.848-6.3l-0.838-3.152l4.896-0.693
+			l3.095-5.403L136.001,209.426z"/>
+		
+			<path id="Chiang_Mai" data-name="Chiang_Mai" fill="#DDDDDD" stroke="#000000" stroke-width="0.5" stroke-miterlimit="10" d="
+			M99.514,76.702l-2.601,14.323L92.89,85.71l-5.268,1.102l-2.569,4.235l-6.924,3.253l-0.583,3.706l3.344,1.77l0.564,8.042
+			l3.111,4.821l-1.949,3.231l-4.169-1.196l-3.092,2.985l-2.273,6.02l1.001,5.157l-4.263,1.307l-2.821-1.647l-1.011-11.981
+			l-1.905-4.392l-4.21-3.914l0.759-3.942l-0.831-7.698l2.195-2.815l-1.725-3.032l0.091-16.6l3.939-1.801l2.727,3.268l3.697,0.847
+			l5.715-1.826l-1.703-4.188l0.592-8.404l-3.986-6.927l10.085-3.086l2.796,1.77l3.101-2.21l0.488-6.725l4.915-2.469l3.605,1.81
+			l6.508-2.758l-4.962,13.58l-2.598,2.05l2.475,11.395l-0.967,2.761L99.514,76.702z"/>
+		
+			<path id="Tak" data-name="Tak" fill="#DDDDDD" stroke="#000000" stroke-width="0.5" stroke-miterlimit="10" d="
+			M87.666,119.12l0.123,6.19l9.203,4.506l-1.174,10.117l2.05,1.275l-3.149,10.479l-7.333,1.996l-0.183,6.448l2.5,12.22l1.304,3.029
+			l-2.44,6.892l0.453,4.641l-2.324,5.252l-2.661-1.669l-7.015-10.482l-3.656-1.738l1.215-9.226l2.925-4.562l3.901,0.479l2.912-8.287
+			l-1.807-1.732l-4.921,5.038l-1.549-5.797l-5.346-7.947l1.615-5.18l-2.799-4.169l-9.695-8.36l-3.599-6.2l-2.286-1.511l12.056-4.31
+			l1.011,11.981l2.821,1.647l4.263-1.307l-1.001-5.157l2.273-6.02l3.092-2.985l0.337,8.281L87.666,119.12z"/>
+		
+			<path id="Nakhon_Pathom" data-name="Nakhon_Pathom" fill="#DDDDDD" stroke="#000000" stroke-width="0.5" stroke-miterlimit="10" d="
+			M126.504,225.922l-0.598,2.654l2.201,7.05l-0.12,2.097l-2.213,2.1l-5.52-0.683l-3.611-1.237l-0.39-5.863l-2.066-0.872l-2.097-3.583
+			l5.34-2.56l7.173-0.967L126.504,225.922z"/>
+		
+			<path id="Chiang_Rai" data-name="Chiang_Rai" fill="#DDDDDD" stroke="#000000" stroke-width="0.5" stroke-miterlimit="10" d="
+			M129.766,54.516l-6.3,3.419l-1.385,4.172l-6.269,2.752l-0.734-2.957l-6.779,1.615l-3.508,0.208l-0.34,9.122l-4.937,3.854
+			l-2.727-5.494l0.967-2.761l-2.475-11.395l2.598-2.05l4.962-13.58l-0.176-5.882l8.684,0.34l4.732-3.36l4.805,3.857l7.487-2.204
+			l3.564,6.089l2.679,0.998l-1.977,8.476L129.766,54.516z"/>
+	</g>
+	<style>
+	#g-_thai_restaurants-Artboard_1-interactions-img rect, #g-_thai_restaurants-Artboard_1-interactions-img circle, #g-_thai_restaurants-Artboard_1-interactions-img path, #g-_thai_restaurants-Artboard_1-interactions-img line, #g-_thai_restaurants-Artboard_1-interactions-img polyline, #g-_thai_restaurants-Artboard_1-interactions-img polygon { vector-effect: non-scaling-stroke; }
+	</style>
+	</svg>
+
+			<div id="g-ai0-1" class="g-static g-aiAbs g-aiPointText" style="top:18.0423%;margin-top:-10.1px;left:87.806%;width:66px;">
+				<p class="g-pstyle0">Charm</p>
+			</div>
+			<div id="g-ai0-2" class="g-static g-aiAbs g-aiPointText" style="top:18.0423%;margin-top:-10.1px;left:87.806%;width:66px;">
+				<p class="g-pstyle1">Charm</p>
+			</div>
+			<div id="g-ai0-3" class="g-static g-aiAbs g-aiPointText" style="top:18.0423%;margin-top:-10.1px;left:87.806%;width:66px;">
+				<p class="g-pstyle1">Charm</p>
+			</div>
+			<div id="g-ai0-4" class="g-static g-aiAbs g-aiPointText" style="top:34.3798%;margin-top:-9.8px;left:64.7931%;width:146px;">
+				<p class="g-pstyle0">Columbia University</p>
+			</div>
+			<div id="g-ai0-5" class="g-static g-aiAbs g-aiPointText" style="top:34.3798%;margin-top:-9.8px;left:64.7931%;width:146px;">
+				<p class="g-pstyle2">Columbia University</p>
+			</div>
+			<div id="g-ai0-6" class="g-static g-aiAbs g-aiPointText" style="top:34.3798%;margin-top:-9.8px;left:64.7931%;width:146px;">
+				<p class="g-pstyle1">Columbia University</p>
+			</div>
+			<div id="g-ai0-7" class="g-static g-aiAbs g-aiPointText" style="top:44.5033%;margin-top:-10.1px;left:77.5615%;width:147px;">
+				<p class="g-pstyle0">Pa Pa Thai Cuisine</p>
+			</div>
+			<div id="g-ai0-8" class="g-static g-aiAbs g-aiPointText" style="top:44.5033%;margin-top:-10.1px;left:77.5615%;width:147px;">
+				<p class="g-pstyle1">Pa Pa Thai Cuisine</p>
+			</div>
+			<div id="g-ai0-9" class="g-static g-aiAbs g-aiPointText" style="top:44.5033%;margin-top:-10.1px;left:77.5615%;width:147px;">
+				<p class="g-pstyle1">Pa Pa Thai Cuisine</p>
+			</div>
+			<div id="g-ai0-10" class="g-static g-aiAbs g-aiPointText" style="top:54.5683%;margin-top:-10.1px;left:53.1833%;width:100px;">
+				<p class="g-pstyle0">Thai Market</p>
+			</div>
+			<div id="g-ai0-11" class="g-static g-aiAbs g-aiPointText" style="top:54.5683%;margin-top:-10.1px;left:72.5527%;width:59px;">
+				<p class="g-pstyle0">Spice</p>
+			</div>
+			<div id="g-ai0-12" class="g-static g-aiAbs g-aiPointText" style="top:54.5683%;margin-top:-10.1px;left:53.1833%;width:100px;">
+				<p class="g-pstyle1">Thai Market</p>
+			</div>
+			<div id="g-ai0-13" class="g-static g-aiAbs g-aiPointText" style="top:54.5683%;margin-top:-10.1px;left:53.1833%;width:100px;">
+				<p class="g-pstyle1">Thai Market</p>
+			</div>
+			<div id="g-ai0-14" class="g-static g-aiAbs g-aiPointText" style="top:54.5683%;margin-top:-10.1px;left:72.5527%;width:59px;">
+				<p class="g-pstyle1">Spice</p>
+			</div>
+			<div id="g-ai0-15" class="g-static g-aiAbs g-aiPointText" style="top:54.5683%;margin-top:-10.1px;left:72.5527%;width:59px;">
+				<p class="g-pstyle1">Spice</p>
+			</div>
+			<div id="g-ai0-16" class="g-static g-aiAbs g-aiPointText" style="top:59.1137%;margin-top:-10.1px;left:44.1379%;width:150px;">
+				<p class="g-pstyle0">Living Thai Cuisine</p>
+			</div>
+			<div id="g-ai0-17" class="g-static g-aiAbs g-aiPointText" style="top:59.1137%;margin-top:-10.1px;left:44.1379%;width:150px;">
+				<p class="g-pstyle1">Living Thai Cuisine</p>
+			</div>
+			<div id="g-ai0-18" class="g-static g-aiAbs g-aiPointText" style="top:59.1137%;margin-top:-10.1px;left:44.1379%;width:150px;">
+				<p class="g-pstyle1">Living Thai Cuisine</p>
+			</div>
+			<div id="g-ai0-19" class="g-static g-aiAbs g-aiPointText" style="top:66.7436%;margin-top:-10.1px;left:74.9258%;width:75px;">
+				<p class="g-pstyle0">Mekong</p>
+			</div>
+			<div id="g-ai0-20" class="g-static g-aiAbs g-aiPointText" style="top:66.7436%;margin-top:-10.1px;left:74.9258%;width:75px;">
+				<p class="g-pstyle1">Mekong</p>
+			</div>
+			<div id="g-ai0-21" class="g-static g-aiAbs g-aiPointText" style="top:66.7436%;margin-top:-10.1px;left:74.9258%;width:75px;">
+				<p class="g-pstyle1">Mekong</p>
+			</div>
+			<div id="g-ai0-22" class="g-static g-aiAbs g-aiPointText" style="top:70.802%;margin-top:-10.1px;left:54.1012%;width:65px;">
+				<p class="g-pstyle0">Raenu</p>
+			</div>
+			<div id="g-ai0-23" class="g-static g-aiAbs g-aiPointText" style="top:70.802%;margin-top:-10.1px;left:54.1012%;width:65px;">
+				<p class="g-pstyle1">Raenu</p>
+			</div>
+			<div id="g-ai0-24" class="g-static g-aiAbs g-aiPointText" style="top:70.802%;margin-top:-10.1px;left:54.1012%;width:65px;">
+				<p class="g-pstyle1">Raenu</p>
+			</div>
+			<div id="g-ai0-25" class="g-static g-aiAbs g-aiPointText" style="top:76.9709%;margin-top:-10.1px;left:41.8512%;width:86px;">
+				<p class="g-pstyle0">Opai Thai</p>
+			</div>
+			<div id="g-ai0-26" class="g-static g-aiAbs g-aiPointText" style="top:76.9709%;margin-top:-10.1px;left:41.8512%;width:86px;">
+				<p class="g-pstyle1">Opai Thai</p>
+			</div>
+			<div id="g-ai0-27" class="g-static g-aiAbs g-aiPointText" style="top:76.9709%;margin-top:-10.1px;left:41.8512%;width:86px;">
+				<p class="g-pstyle1">Opai Thai</p>
+			</div>
+			<div id="g-ai0-28" class="g-static g-aiAbs g-aiPointText" style="top:79.5612%;margin-top:-8.1px;left:83.6859%;width:88px;">
+				<p class="g-pstyle3">Manhattan</p>
+			</div>
+			<div id="g-ai0-29" class="g-static g-aiAbs g-aiPointText" style="top:79.5612%;margin-top:-8.1px;left:83.6859%;width:88px;">
+				<p class="g-pstyle4">Manhattan</p>
+			</div>
+			<div id="g-ai0-30" class="g-static g-aiAbs g-aiPointText" style="top:79.5612%;margin-top:-8.1px;left:83.6859%;width:88px;">
+				<p class="g-pstyle5">Manhattan</p>
+			</div>
+			<div id="g-ai0-31" class="g-static g-aiAbs g-aiPointText" style="top:79.5612%;margin-top:-8.1px;left:83.6859%;width:88px;">
+				<p class="g-pstyle4">Manhattan</p>
+			</div>
+			<div id="g-ai0-32" class="g-static g-aiAbs g-aiPointText" style="top:90.1132%;margin-top:-8.1px;left:12.4549%;width:31px;">
+				<p class="g-pstyle6">N</p>
+			</div>
+			<div id="g-ai0-33" class="g-static g-aiAbs g-aiPointText" style="top:91.8692%;margin-top:-6.9px;left:2.5%;width:50px;">
+				<p class="g-pstyle7">300 m</p>
+			</div>
+			<div id="g-ai0-34" class="g-static g-aiAbs g-aiPointText" style="top:93.9133%;margin-top:-7.5px;left:74.5%;width:30px;">
+				<p class="g-pstyle8">&copy;</p>
+			</div>
+			<div id="g-ai0-35" class="g-static g-aiAbs g-aiPointText" style="top:93.9133%;margin-top:-7.5px;left:76.3066%;width:100px;">
+				<p class="g-pstyle8">OpenStreetMap</p>
+			</div>
+			<div id="g-ai0-36" class="g-static g-aiAbs g-aiPointText" style="top:93.9133%;margin-top:-7.5px;left:89.7048%;width:79px;">
+				<p class="g-pstyle8">contributors</p>
+			</div>
+		</div>
+
+	</div>
+<!-- End ai2html - 2023-08-26 01:40 -->
+	</div>
+
+	<div class="text-container">
+		<div class="chart">
+		</div>
 
         <p>Story: Increasing Thai population NYC.</p>
 
@@ -433,25 +482,21 @@
           <div class="chart"></div>
        
         <p>This article is written by Mayumi Oshige. If you have any questions, contact me at <a href="mailtp:mayumioshige@gmail.com">mayumioshige@gmail.com</a></p>
-  
+		</p>
 
-      </div>
-    </div>
-  </section>
+	</div>
+	</section>
 
-  
   <script>
-
-
-	d3.select("#Charm_icon").on('mouseover',
+	d3.select("#charm_icon").on('mouseover',
 	function(e){
-		d3.select("#Charm_icon").style('fill', 'orange')
+		d3.select("#charm_icon").style('fill', 'orange')
 		d3.select("#Bangkok").style('fill', 'orange')
 
 	})
 	.on('mouseout', 
 		function(e){
-			d3.select("#Charm_icon").style('fill', 'black')
+			d3.select("#charm_icon").style('fill', 'black')
 			d3.select("#Bangkok").style('fill', '#E0DEDE')
 		})
 
@@ -543,8 +588,6 @@
 			d3.select("#Mek_icon").style('fill', 'black')
 			d3.select("#Nakhon_Pathom").style('fill', '#E0DEDE')
 		})
-
-
 </script>
 
   </body>
