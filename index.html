@@ -1,14 +1,18 @@
 <!DOCTYPE html>
-<html class="g-resizer-v3-init">
+<html lang="en" class="g-resizer-v3-init">
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta property="og:title" content="Thai restaurants in NYC" />
     <meta property="og:description" content="webiste shows mapping Thai restaurants" />
     <meta property="og:image" content="https://mymo5303.github.io/project01-suicide/" />
-    <title>Thai restaurants in NYC</title> 
-
-    <style>
+    <title>Thai restaurants in NYC</title>
+	
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Thai&family=Raleway&display=swap" rel="stylesheet">
+    
+	<style>
 		/* General */
 		#header{
 			margin: auto;
@@ -32,8 +36,31 @@
         h1{
 			text-align: center;
 			color:#f1f1f1;
-			font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+			font-family: 'IBM Plex Sans Thai', sans-serif;
+			font-size: 50px;
         }
+
+		h2{
+			text-align: center;
+			color:#f1f1f1;
+			font-family: 'Raleway', sans-serif;
+			font-size: 50px;
+		}
+
+		#testid{
+  			display: inline;
+		}
+
+		.content{
+			position: absolute;
+			top: 20px;
+			left: 12%;
+			transform: transltate(-50%, -50%);
+			background: rgba(0, 0, 0, 0.5);
+			color: #fff
+			width: 100%;
+			padding: 20px;
+		}
 
         p{
           font-size: larger;
@@ -93,18 +120,6 @@
 			object-fit: cover;
 		}
 
-		.content{
-			position: absolute;
-			top: 100px;
-			left: 50%;
-			transform: transltate(-50%, -50%);
-			background: rgba(0, 0, 0, 0.5);
-			color: #fff
-			width: 100%;
-			padding: 20px;
-			font-family: 'Farnklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-		}
-
 		/* Style the button */
 		#myBtn {
 			width: 200px;
@@ -122,7 +137,18 @@
 			color: black;
 		}
 
+		.content2{
+			position: absolute;
+			top: 600px;
+			left: 10%;
+			transform: transltate(-50%, -50%);
+			width: 100%;
+			padding: 20px;
+			font-family: 'Farnklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+		}
+
     </style>
+	
   </head>
 
   <body style="background-color:black;">
@@ -134,13 +160,16 @@
 			"Your browser does not support HTML5 video. "
 		</video>
 		<div class="content">
-			<h1>
-				Thai restaurants in NYC
-				<br>prototype
-			</h1>
+			<h1 id="testid" class="testclass">ร้านอาหารไทย:</h1>
+			<p>Thai Restaurants in New York City</p>
+		</div>
+
+		<div class="content2">
 			<button id="myBtn" onclick="myFunction()">Play</button>
 		</div>
 	</div>
+	</section>
+
 	<!-- contents -->
 	<div class="text-container">
     	<div class="credit">
@@ -281,7 +310,7 @@
 			c0.004,1.353-0.279,2.691-0.832,3.926c-1.456,3.25-8.45,12.636-8.45,12.636s-6.968-9.386-8.45-12.636
 			c-0.552-1.235-0.836-2.573-0.832-3.926c-0.043-5.169,4.112-9.395,9.281-9.438c0,0,0,0,0.001,0
 			C554.169,70.058,558.325,74.283,558.282,79.453C558.282,79.453,558.282,79.453,558.282,79.453z"/>
-		<path id="spice-icon" data-name="spice-icon" d="M429.282,329.453
+		<path id="spice-icon" data-name="ß" d="M429.282,329.453
 			c0.004,1.353-0.28,2.691-0.832,3.926c-1.456,3.25-8.45,12.636-8.45,12.636s-6.968-9.386-8.45-12.636
 			c-0.552-1.235-0.836-2.573-0.832-3.926c-0.043-5.169,4.112-9.395,9.281-9.438c0,0,0,0,0.001,0
 			C425.169,320.058,429.325,324.283,429.282,329.453C429.282,329.453,429.282,329.453,429.282,329.453z"/>
@@ -485,7 +514,6 @@
 		</p>
 
 	</div>
-	</section>
 
   <script>
 	d3.select("#charm_icon").on('mouseover',
