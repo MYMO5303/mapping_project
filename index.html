@@ -12,193 +12,205 @@
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Thai&family=Raleway&display=swap" rel="stylesheet">
     
-	<style>
-		/* General */
-		#header{
-			margin: auto;
-			width: 100%;
-			position: relative;
-			z-index: 5;
-		}
+		<style>
+			/* General */
+			#header{
+				margin: auto;
+				width: 100%;
+				position: relative;
+				z-index: 5;
+			}
 
-		#footer{
-			width: 100%;
-			min-height: 5vh;
-			padding-top: 2vh;
-			padding-bottom: 2vh;
-			text-align: center;
-			line-height: 25px;
-			font-size: 13px;
-			position: relative;
-			z-index: 5;
-		}
+			#footer{
+				width: 100%;
+				min-height: 5vh;
+				padding-top: 2vh;
+				padding-bottom: 2vh;
+				text-align: center;
+				line-height: 25px;
+				font-size: 13px;
+				position: relative;
+				z-index: 5;
+			}
 
-        h1{
-			text-align: center;
+			h1{
+				text-align: left;
+				color:#f1f1f1;
+				font-family: 'Raleway', sans-serif;
+				font-size: 50px;
+			}
+
+			h2{
+				text-align: left;
+				color:#f1f1f1;
+				font-family: 'IBM Plex Sans Thai', sans-serif;
+				font-size: 50px;
+			}
+
+			#testid{
+				display: inline;
+			}
+
+			.content{
+				position: absolute;
+				transform: transltate(-50%, -50%);
+				background: rgba(0, 0, 0, 0.5);
+				color: #fff;
+				width: 100vw;
+				height: auto;
+				padding: 20px;
+			}
+
+			p{
+			font-size: large;
+			color:blanchedalmond;
+			font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+			}
+
+			.text-container{
+				max-width:660px;
+				margin:0 auto;
+				font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+			}
+			
+			.credit{
+			font-size: medium;
 			color:#f1f1f1;
-			font-family: 'IBM Plex Sans Thai', sans-serif;
-			font-size: 50px;
-        }
+			font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+			}
 
-		h2{
-			text-align: center;
-			color:#f1f1f1;
-			font-family: 'Raleway', sans-serif;
-			font-size: 50px;
-		}
+			#a {
+			color: forestgreen;
+			text-decoration: underline;
+			}
 
-		#testid{
-  			display: inline;
-		}
+			.chart{
+			background-color: white;
+			padding: 15px;
+			}
 
-		.content{
-			position: absolute;
-			top: 20px;
-			left: 12%;
-			transform: transltate(-50%, -50%);
-			background: rgba(0, 0, 0, 0.5);
-			color: #fff
-			width: 100%;
-			padding: 20px;
-		}
+			.space{
+			padding: 15px;
+			}
 
-        p{
-          font-size: larger;
-		  color:blanchedalmond;
-          font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-        }
+			img {
+			display: block;
+			width:700px;
+			margin: 0 auto;
+			transition: 0.3s;
+			}
 
-		.text-container{
-			max-width:660px;
-			margin:0 auto;
-			font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-		}
-		
-        .credit{
-          font-size: medium;
-		  color:#f1f1f1;
-          font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-        }
+			/* video header*/
+			* {
+				box-sizing: content-box;
+			}
 
-		#a {
-          color: forestgreen;
-          text-decoration: underline;
-        }
+			#videoContainer{
+				position: relative;
+				width: 100%;
+				height: 800px;
+			}
+			
+			#myVideo{
+				position: absolute;
+				right: 0;
+				bottom: 0;
+				width: 100%;
+				object-fit: cover;
+			}
 
-        .chart{
-          background-color: white;
-          padding: 15px;
-        }
+			/* Style the button */
+			#myBtn {
+				width: 200px;
+				font-size: 18px;
+				padding: 10px;
+				border: none;
+				background: #f20940;
+				color: #fff;
+				cursor: pointer;
+				font-family: 'Roboto', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+			}
 
-        .space{
-          padding: 15px;
-        }
+			#myBtn:hover {
+				background: #ddd;
+				color: black;
+			}
 
-        img {
-          display: block;
-          width:700px;
-          margin: 0 auto;
-          transition: 0.3s;
-        }
+			.content2{
+				position: absolute;
+				top: 600px;
+				left: 10%;
+				transform: transltate(-50%, -50%);
+				width: 100%;
+				padding: 20px;
+			}
 
-		/* video header*/
-		* {
-			box-sizing: content-box;
-		}
+		</style>
+	</head>
 
-		#videoContainer{
-			position: relative;
-			width: 100%;
-			height: 800px;
-		}
-		
-		#myVideo{
-			position: absolute;
-			right: 0;
-			bottom: 0;
-			width: 100%;
-			object-fit: cover;
-		}
+	<body style="background-color:black;">
+		<section>
+			<!-- video header -->
+			<div id="videoContainer">
+				<video autoplay muted loop id="myVideo">
+					<source src="tm.mov" type="video/mp4">
+					"Your browser does not support HTML5 video. "
+				</video>
+				<div class="content">
+					<h1 id="testid" class="testclass">Thai Restaurants near Columbia University <br>and 'Little Thailand Way' in New York</h1>
+						<h2>ร้านอาหารไทย</h2>
+				</div>
+				<div class="content2">
+					<button id="myBtn" onclick="toggleVideo()">Pause</button>
+				</div>
+				<script>
+					// Get a reference to the video element
+					var video = document.getElementById("myVideo");
+					var button = document.getElementById("myBtn");
 
-		/* Style the button */
-		#myBtn {
-			width: 200px;
-			font-size: 18px;
-			padding: 10px;
-			border: none;
-			background: #f20940;
-			color: #fff;
-			cursor: pointer;
-			font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-		}
-
-		#myBtn:hover {
-			background: #ddd;
-			color: black;
-		}
-
-		.content2{
-			position: absolute;
-			top: 600px;
-			left: 10%;
-			transform: transltate(-50%, -50%);
-			width: 100%;
-			padding: 20px;
-			font-family: 'Farnklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-		}
-
-    </style>
-	
-  </head>
-
-  <body style="background-color:black;">
-	<section>
-	<!-- video header -->
-	<div id="videoContainer">
-		<video autoplay muted loop id="myVideo">
-			<source src="tm.mov" type="video/mp4">
-			"Your browser does not support HTML5 video. "
-		</video>
-		<div class="content">
-			<h1 id="testid" class="testclass">ร้านอาหารไทย:</h1>
-			<p>Thai Restaurants in New York City</p>
-		</div>
-
-		<div class="content2">
-			<button id="myBtn" onclick="myFunction()">Play</button>
-		</div>
-	</div>
-	</section>
-
-	<!-- contents -->
-	<div class="text-container">
-    	<div class="credit">
-			By Mayumi Oshige  |  August 7, 2023  |
-			<a href=" " target="_blank"><u>Github</u></a>
-		</div>
-
-		<p> Do you like Thai food? Yes, you do. But Do you know where
-			Thailand is?  I show you it is here.
-		</p>
-
-		<p>Map1: Map of Thailand in south East asia goes here.
-
-			<div class="chart">
-				<iframe title="Thailand is here!" aria-label="Map" id="datawrapper-chart-l0qC8" src="https://datawrapper.dwcdn.net/l0qC8/2/" scrolling="no" frameborder="0" style="width: 0; min-width: 100% !important; border: none;" height="599" data-external="1"></iframe><script type="text/javascript">!function(){"use strict";window.addEventListener("message",(function(a){if(void 0!==a.data["datawrapper-height"]){var e=document.querySelectorAll("iframe");for(var t in a.data["datawrapper-height"])for(var r=0;r<e.length;r++)if(e[r].contentWindow===a.source){var i=a.data["datawrapper-height"][t]+"px";e[r].style.height=i}}}))}();
+					// Function to toggle play/pause
+					function toggleVideo() {
+						if (video.paused) {
+							video.play();
+							button.textContent = "Pause";
+						} else {
+							video.pause();
+							button.textContent = "Play";
+						}
+					}
 				</script>
 			</div>
-		</p>
+		</section>
 
-		<p>Story: Thai food varies by region w/pictures.
-			<figure><img src="IMG_0112.JPG" alt=" ">
-				<figcaption>
-					Thai restaurants
-				</figcaption>
-			</figure>
-		</p>
+		<!-- contents -->
+		<div class="text-container">
+			<div class="credit">
+				By Mayumi Oshige  |  August 7, 2023  |
+				<a href=" " target="_blank"><u>Github</u></a>
+			</div>
 
-		<p>Map2: Interactive map(ai2html) goes here.</p>
-	</div>
+			<p> Do you like Thai food? Yes, you do. But Do you know where
+				Thailand is?  I show you it is here.
+			</p>
+
+			<p>Map1: Map of Thailand in south East asia goes here.
+
+				<div class="chart">
+					<iframe title="Thailand is here!" aria-label="Map" id="datawrapper-chart-l0qC8" src="https://datawrapper.dwcdn.net/l0qC8/2/" scrolling="no" frameborder="0" style="width: 0; min-width: 100% !important; border: none;" height="599" data-external="1"></iframe><script type="text/javascript">!function(){"use strict";window.addEventListener("message",(function(a){if(void 0!==a.data["datawrapper-height"]){var e=document.querySelectorAll("iframe");for(var t in a.data["datawrapper-height"])for(var r=0;r<e.length;r++)if(e[r].contentWindow===a.source){var i=a.data["datawrapper-height"][t]+"px";e[r].style.height=i}}}))}();
+					</script>
+				</div>
+			</p>
+
+			<p>Story: Thai food varies by region w/pictures.
+				<figure><img src="IMG_0112.JPG" alt=" ">
+					<figcaption>
+						Thai restaurants
+					</figcaption>
+				</figure>
+			</p>
+
+			<p>Map2: Interactive map(ai2html) goes here.</p>
+		</div>
     
 	<div class="ai2html-container">
 <!-- Generated by ai2html v0.113.0 - 2023-08-26 01:40 -->
